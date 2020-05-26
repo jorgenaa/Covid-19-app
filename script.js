@@ -18,7 +18,6 @@ function selectConutries(countries) {
 	const selector = document.querySelector('.selector');
 	const template = document.getElementById('template');
 	const totalDeath = document.getElementById('sum');
-	console.log(template.childNodes);
 	let html = '';
 	let sum = 0;
 
@@ -47,11 +46,12 @@ function selectConutries(countries) {
                                     <td class="remove"><i class="fa fa-trash"></i></td>
                                 </tr>   
 								`;
-//Delete table row
-		template.childNodes.forEach((childNode) => {
+//Delete table row 
+template.childNodes.forEach((childNode) => {
 			childNode.addEventListener('click', function (e) {
 				e.target.parentElement.remove();
 			});
+			
 		});
 	});
 }
