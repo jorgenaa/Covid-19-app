@@ -1,11 +1,11 @@
 const url = 'https://api.covid19api.com/summary';
-const corsEnabledUrl = 'http://noroffcors.herokuapp.com/' + url;
+//const corsEnabledUrl = 'http://noroffcors.herokuapp.com/' + url;
 
 async function getCoronaCasualties() {
 	try {
-		const response = await fetch(corsEnabledUrl);
+		const response = await fetch(url);
 		const result = await response.json();
-
+		console.log(result);
 		selectConutries(result.Countries);
 	} catch (error) {
 		result.innerHTML = 'There was an error';
