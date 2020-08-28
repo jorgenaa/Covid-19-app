@@ -5,7 +5,7 @@ async function getCoronaCasualties() {
 	try {
 		const response = await fetch(url);
 		const result = await response.json();
-		console.log(result);
+		
 		selectConutries(result.Countries);
 	} catch (error) {
 		result.innerHTML = 'There was an error';
